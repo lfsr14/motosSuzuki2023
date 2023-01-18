@@ -1,0 +1,76 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {background: #E4E6E6;}
+.btn-moto {padding: 10px;}
+.cont-moto {
+    margin: 5px auto;
+    border: 1px solid #003145;
+    border-radius: 5px;
+    padding: 3px;
+}
+.moto {max-width: 650px;}
+.link-moto {display: block;}
+.link-moto:hover .moto {-webkit-transform:scale(1.3);transform:scale(1.3);}
+.link-moto {overflow:hidden;}
+.img-suzuki {max-width: 100px;margin: auto;}
+header {
+    position: sticky;
+    top: 0px;
+    background: #E4E6E6;
+}
+.header {
+    display: flex;
+    border-bottom: 1px solid #003145;
+    margin-bottom: 20px;
+}
+.catalogo {
+    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+footer, .contacto {
+  background-color: #003145;
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: medium;
+}
+footer {
+    padding-top: 20px;
+
+}
+.contacto {
+    font-size: xx-small;
+}
+.demo {
+    margin-top: 10px;
+    background: #00e0e6;
+    font-size: x-small;
+}
+.footer {
+    display: flex;
+}
+.footer span {
+    width: 33%;
+}
+@media (max-width: 1100px) {
+    .catalogo {margin: 0 5%;}
+    .moto {max-width: 600px;}
+}
+@media (max-width: 900px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer span{
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .moto {max-width: 300px;}
+}
