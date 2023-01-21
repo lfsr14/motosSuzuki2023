@@ -182,9 +182,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const WEATHER_QUERY = _apollo_client__WEBPACK_IMPORTED_MODULE_4__.gql`
-  query MyQuery($reg: String!){
-    usuariosJson(registro: {eq: $reg}) {
+const USUARIOS_QUERY = _apollo_client__WEBPACK_IMPORTED_MODULE_4__.gql`
+  query QueryUsuarios($registro: String!){
+    usuariosJson(registro: {eq: $registro}) {
       id
       registro
       documento
@@ -200,31 +200,23 @@ const WEATHER_QUERY = _apollo_client__WEBPACK_IMPORTED_MODULE_4__.gql`
 const Index = ({
   location
 }) => {
-  console.log(location);
-  let reg = "";
-  let file = null;
-  let params = window.location.search;
-  params = params.replace("?", "");
-  params = params.split("&");
-  params.forEach(element => {
-    let p = element.split("=");
-    if (p[0] == "u") reg = p[1];else if (p[0] == "f") file = p[1];
-  });
-  let contacto = {
-    nombre: ''
-  };
+  let qparams = new URLSearchParams(location.search);
+  let contacto = {};
+  let registro = qparams.get("u");
+  let archivo = qparams.get("f");
+  if (!registro) registro = "";
   let {
     loading,
     error,
     data
-  } = (0,_apollo_client__WEBPACK_IMPORTED_MODULE_5__.useQuery)(WEATHER_QUERY, {
+  } = (0,_apollo_client__WEBPACK_IMPORTED_MODULE_5__.useQuery)(USUARIOS_QUERY, {
     variables: {
-      reg
+      registro
     },
     notifyOnNetworkStatusChange: true
   });
-  if (loading) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Loading...");
-  if (error) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Error...");
+  if (loading) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Cargando...");
+  if (error) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Error al cargar la p\xE1gina, consulte con el administrador.");
   if (data.usuariosJson) contacto = data.usuariosJson;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     contacto: contacto
