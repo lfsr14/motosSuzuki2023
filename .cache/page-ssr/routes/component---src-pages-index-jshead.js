@@ -197,7 +197,10 @@ const WEATHER_QUERY = _apollo_client__WEBPACK_IMPORTED_MODULE_4__.gql`
     }
   }
 `;
-const Index = () => {
+const Index = ({
+  location
+}) => {
+  console.log(location);
   let reg = "";
   let file = null;
   let params = window.location.search;

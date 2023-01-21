@@ -4,9 +4,9 @@ import Catalogo from "../components/catalogo"
 import Footer from "../components/footer"
 import { useQuery, gql } from '@apollo/client';
 
-const WEATHER_QUERY = gql`
-  query MyQuery($reg: String!){
-    usuariosJson(registro: {eq: $reg}) {
+const USUARIOS_QUERY = gql`
+  query QueryUsuarios($registro: String!){
+    usuariosJson(registro: {eq: $registro}) {
       id
       registro
       documento
@@ -20,29 +20,23 @@ const WEATHER_QUERY = gql`
   }
 `;
 
-const Index = () => {
-  let reg = "";
-  let file = null;
+const Index = ({location}) => {
+  
+  let qparams = new URLSearchParams(location.search);
+  let contacto = {};
+  let registro = qparams.get("u");
+  let archivo = qparams.get("f")
 
-  let params = window.location.search;
-  params = params.replace("?", "");
-  params = params.split("&");
-  params.forEach(element => {
-    let p = element.split("=");
-    if(p[0] == "u") 
-      reg = p[1];
-    else if(p[0] == "f")
-      file = p[1]; 
-  });
-
-  let contacto = {nombre: ''};
-  let { loading, error, data } = useQuery(WEATHER_QUERY, {
-    variables: { reg },
+  if (!registro)
+    registro = "";  
+  
+  let { loading, error, data } = useQuery(USUARIOS_QUERY, {
+    variables: { registro },
     notifyOnNetworkStatusChange: true
   });
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div>Error al cargar la página, consulte con el administrador.</div>;
 
   if (data.usuariosJson)
     contacto = data.usuariosJson;
