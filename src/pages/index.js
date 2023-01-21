@@ -1,32 +1,12 @@
-import * as React from "react"
+import React from 'react';
 import Header from "../components/header"
 import Catalogo from "../components/catalogo"
 import Footer from "../components/footer"
-import { useStaticQuery, graphql } from "gatsby"
+import { useQuery, gql } from '@apollo/client';
 
-export default function Home() {
-
-  let usuario = "";
-  let file = null;
-  console.log(window.location);
-
-  let params = window.location.search;
-  params = params.replace("?", "");
-  params = params.split("&");
-  params.forEach(element => {
-    let p = element.split("=");
-    if(p[0] == "u") 
-      usuario = p[1];
-    else if(p[0] == "f")
-      file = p[1]; 
-
-  });
-
-  console.log(usuario);
-
-  const dt = useStaticQuery(graphql`
-  query MyQuery {
-    usuariosJson(registro: {eq: "AS1"}) {
+const WEATHER_QUERY = gql`
+  query MyQuery($reg: String!){
+    usuariosJson(registro: {eq: $reg}) {
       id
       registro
       documento
@@ -37,15 +17,43 @@ export default function Home() {
       direccion
       vitrina
     }
-  }	
-  `);
-  console.log(dt);
+  }
+`;
 
+const Index = () => {
+  let reg = "";
+  let file = null;
+
+  let params = window.location.search;
+  params = params.replace("?", "");
+  params = params.split("&");
+  params.forEach(element => {
+    let p = element.split("=");
+    if(p[0] == "u") 
+      reg = p[1];
+    else if(p[0] == "f")
+      file = p[1]; 
+  });
+
+  let contacto = {nombre: ''};
+  let { loading, error, data } = useQuery(WEATHER_QUERY, {
+    variables: { reg },
+    notifyOnNetworkStatusChange: true
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error...</div>;
+
+  if (data.usuariosJson)
+    contacto = data.usuariosJson;
+  
   return (
     <div>
-      <Header/>
+      <Header contacto={contacto}/>
       <Catalogo/>
       <Footer/>
     </div>
-  )
-}
+  );
+};
+
+export default Index;
