@@ -1,6 +1,6 @@
 var plugins = [{
       name: 'partytown',
-      plugin: require('C:/Users/franc/OneDrive/Desktop/ProyectosGATSBY/CatalogoSuzuki2023/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
+      plugin: require('C:/Users/franc/OneDrive/Desktop/ProyectosGATSBY/motosSuzuki2023/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 /* global plugins */

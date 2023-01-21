@@ -16,10 +16,21 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.4",
+    "babel-preset-gatsby": "^3.4.0",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
     "gatsby": "^5.4.0",
+    "gatsby-plugin-apollo": "^4.0.3",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-postcss": "^6.4.0",
+    "gatsby-remark-encrypt": "^1.1.0",
+    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-transformer-json": "^5.4.0",
+    "graphql": "^16.6.0",
+    "js": "^0.1.0",
     "react": "^18.2.0",
+    "react-apollo": "^3.1.5",
     "react-dom": "^18.2.0"
   },
   "repository": {
