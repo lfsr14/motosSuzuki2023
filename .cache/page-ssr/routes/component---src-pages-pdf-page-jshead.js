@@ -163,6 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const MOTOCICLETAS_REGISTRADAS = ['GIXXER-150-FI-ABS', 'GIXXER-250-SF', 'GIXXER-250', 'GN-125', 'GSX-R-150-2022-ABS', 'GSX-S-2022-ABS', 'GSX-S1000', 'HAYABUSA'];
 const Page = ({
   location
 }) => {
@@ -176,12 +177,12 @@ const Page = ({
       contacto = usuario;
     }
   });
+  if (!MOTOCICLETAS_REGISTRADAS.includes(archivo)) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Lo sentimos, no encontramos la motocicleta asociada al c\xF3digo indicado");
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     contacto: contacto
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
     className: "visor-pdf",
-    src: "../static/data/GIXXER-150-FI-ABS.pdf",
-    frameborder: "0"
+    src: "../static/data/" + archivo + ".pdf"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     contacto: contacto
   }));
