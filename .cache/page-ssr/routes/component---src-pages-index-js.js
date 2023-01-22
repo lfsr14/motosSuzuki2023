@@ -1954,7 +1954,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "cont-moto"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  className: props.registro ? "link-moto" : "ocultar",
   to: `/pdfPage` + "?u=" + props.registro + "&f=" + props.item.nombrePdf
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  className: "moto",
+  src: props.item.imagen
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  className: props.registro ? "ocultar" : "link-moto",
+  href: props.item.pdf,
+  target: "_blank"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "moto",
   src: props.item.imagen
@@ -2016,8 +2024,12 @@ __webpack_require__.r(__webpack_exports__);
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "SUZUKI MOTOR DE COLOMBIA S.A."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
   className: !props.contacto.direccion ? `ocultar` : `lbl-direccion`
 }, props.contacto.direccion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  className: !props.contacto.direccion ? `lbl-direccion` : `ocultar`
+}, "Todos los derechos reservados"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
   className: !props.contacto.vitrina ? `ocultar` : `lbl-vitrina`
-}, props.contacto.vitrina)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+}, props.contacto.vitrina), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  className: !props.contacto.vitrina ? `lbl-vitrina` : `ocultar`
+}, "Nit 891410137-2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "demo"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
   className: "textDemo"

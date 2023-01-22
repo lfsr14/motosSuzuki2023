@@ -42,7 +42,7 @@ const Page = ({location}) => {
       <Header contacto={contacto}/>
 
       <div className="contenedor-btn-pdf">
-        <p>( Información relevante )</p>
+        <p><strong>{archivo}</strong></p>
         <p>( Información relevante )</p>
         <p>( Información relevante )</p>
         <a className="btn-pdf" href={"../static/data/" + archivo + ".pdf"} target="_blank">
