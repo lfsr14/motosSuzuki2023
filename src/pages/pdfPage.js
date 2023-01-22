@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from "../components/header"
 import Footer from "../components/footer"
-
+import imgSuzuki from "../imgs/Suzuki.png"
 import Usuarios from "../data/usuarios"
+import { Link } from 'gatsby';
 
 const MOTOCICLETAS_REGISTRADAS = [
   'GIXXER-150-FI-ABS',
@@ -34,15 +35,30 @@ const Page = ({location}) => {
   if (!MOTOCICLETAS_REGISTRADAS.includes(archivo))
     return (<span>Lo sentimos, no encontramos la motocicleta asociada al código indicado</span>);
     
+  let url = '/static/data/' + archivo + '.pdf';
+
   return (
     <div>
       <Header contacto={contacto}/>
 
-      <iframe className='visor-pdf' src={"../static/data/" + archivo + ".pdf"}></iframe>
+      <div className="contenedor-btn-pdf">
+        <p>( Información relevante )</p>
+        <p>( Información relevante )</p>
+        <p>( Información relevante )</p>
+        <a className="btn-pdf" href={"../static/data/" + archivo + ".pdf"} target="_blank">
+          VER PDF
+        </a>
+        <Link className="btn-catalogo" to={"/" + "?u=" + contacto.registro}>
+          VER CATÁLOGO
+        </Link>
+        
+        <img className="img-suzuki logo-pg" src={imgSuzuki}></img>
+      </div>
+      
 
       <Footer contacto={contacto}/>
     </div>
   );
 };
-
+//<iframe src={url} className='visor-pdf' ></iframe>
 export default Page;

@@ -182,7 +182,7 @@ const Page = ({
     contacto: contacto
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
     className: "visor-pdf",
-    src: "../static/data/" + archivo + ".pdf"
+    src: "/static/data/" + archivo + ".pdf"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     contacto: contacto
   }));
