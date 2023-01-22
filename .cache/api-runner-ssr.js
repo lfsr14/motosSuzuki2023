@@ -1,4 +1,8 @@
 var plugins = [{
+      name: 'gatsby-plugin-fontawesome-css',
+      plugin: require('C:/Users/franc/OneDrive/Desktop/ProyectosGATSBY/motosSuzuki2023/node_modules/gatsby-plugin-fontawesome-css/gatsby-ssr.js'),
+      options: {"plugins":[]},
+    },{
       name: 'default-site-plugin',
       plugin: require('C:/Users/franc/OneDrive/Desktop/ProyectosGATSBY/motosSuzuki2023/gatsby-ssr.js'),
       options: {"plugins":[]},

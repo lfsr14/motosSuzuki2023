@@ -36,7 +36,7 @@ const Index = ({location}) => {
   >>>IMPORTANTE: PARA USAR ESTE BLOQUE DE CODIGO, SE DEBE USAR UNA URL PUBLICA PARA ACCEDER A GRAPHQL
   Y CONFIGURARLA EN EL ARCHIVO /src/apollo/client
 
-  
+
   let { loading, error, data } = useQuery(USUARIOS_QUERY, {
     variables: { registro },
     notifyOnNetworkStatusChange: true
@@ -58,7 +58,7 @@ const Index = ({location}) => {
     <div>
       <Header contacto={contacto}/>
       <Catalogo/>
-      <Footer/>
+      <Footer contacto={contacto}/>
     </div>
   );
 };

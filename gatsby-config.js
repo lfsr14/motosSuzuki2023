@@ -12,6 +12,7 @@ module.exports = {
     'gatsby-plugin-postcss', 
     'gatsby-plugin-netlify',
     'gatsby-transformer-json',
+    'gatsby-plugin-fontawesome-css',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

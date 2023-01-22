@@ -7,7 +7,8 @@ export default [
     "wapp": "3112546509",
     "instagram": "bernardosuzuki",
     "direccion": "Cra 19 # 134 - 15 Bogotá D.C., Colombia.",
-    "vitrina": "Suzuki Concept Store Bogotá"
+    "vitrina": "Suzuki Concept Store Bogotá",
+    "tipo": "a"
   },
   {
     "registro": "AS2",
@@ -17,6 +18,18 @@ export default [
     "wapp": "3112546509",
     "instagram": "",
     "direccion": "Cra 19 # 134 - 15 Bogotá D.C., Colombia.",
-    "vitrina": "Suzuki Concept Store Bogotá"
+    "vitrina": "Suzuki Concept Store Bogotá",
+    "tipo": "a"
+  },
+  {
+    "registro": "VT1",
+    "documento": null,
+    "nombre": "Suzuki Concept Store Bogotá",
+    "telefono": "3112546509",
+    "wapp": "3102132986",
+    "instagram": "suzukiconcept",
+    "direccion": "Cra 19 # 134 - 15 Bogotá D.C., Colombia.",
+    "vitrina": null,
+    "tipo": "v"
   }
 ]
