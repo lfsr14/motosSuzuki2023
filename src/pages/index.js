@@ -57,7 +57,7 @@ const Index = ({location}) => {
   return (
     <div>
       <Header contacto={contacto}/>
-      <Catalogo/>
+      <Catalogo contacto={contacto}/>
       <Footer contacto={contacto}/>
     </div>
   );
