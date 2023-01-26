@@ -1948,30 +1948,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "cont-moto"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-  className: props.registro ? "link-moto" : "ocultar",
-  to: `/pdfPage` + "?u=" + props.registro + "&f=" + props.item.nombrePdf
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  className: "moto",
-  src: props.item.imagen
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  className: props.registro ? "ocultar" : "link-moto",
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  className: "link-moto",
   href: props.item.pdf,
   target: "_blank"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "moto",
-  src: props.item.imagen
+  src: props.item.imagen,
+  alt: props.item.nombre
 }))));
-// CODIGO PARA NO IR A LA PÁGINA pdfPage SINO DIRECTO A DESCARGAR EL PDF:
-//
-//<a className="link-moto" href={props.item.pdf} target="_blank">
-//    <img className="moto" src={props.item.imagen}></img>
-//</a>
+
+// CODIGO QUE SE USABA PARA IR A LA 2da PAGINA 
+
+//<Link className={props.registro ? "link-moto" : "ocultar"} to={`/pdfPage` + "?u=" + props.registro + "&f=" + props.item.nombrePdf}>
+//  <img className="moto" src={props.item.imagen}></img>
+//</Link>
 
 /***/ }),
 
@@ -1993,13 +1987,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "catalogo"
 }, _data_listadoMotos__WEBPACK_IMPORTED_MODULE_1__["default"].map(moto => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Moto__WEBPACK_IMPORTED_MODULE_2__["default"], {
     item: moto,
-    key: moto.id,
-    registro: props.contacto.registro
+    key: moto.id
   });
 })));
 
@@ -2054,6 +2047,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logos_llamar_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../logos/llamar.png */ "./src/logos/llamar.png");
 /* harmony import */ var _logos_wapp_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../logos/wapp.png */ "./src/logos/wapp.png");
 /* harmony import */ var _logos_instagram_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../logos/instagram.png */ "./src/logos/instagram.png");
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+
 
 
 
@@ -2066,7 +2061,9 @@ function isMobile() {
   className: "border-solid\tborder-b-2 border-neutral-900"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "header"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_5__.Link, {
+  to: "/" + "?u=" + props.contacto.registro
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "img-suzuki",
   src: _imgs_Suzuki_png__WEBPACK_IMPORTED_MODULE_1__["default"]
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -2089,21 +2086,24 @@ function isMobile() {
   target: "_blank"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "logo lg-llamar",
-  src: _logos_llamar_png__WEBPACK_IMPORTED_MODULE_2__["default"]
+  src: _logos_llamar_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+  alt: "logo-telefono"
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   className: !props.contacto.wapp ? `ocultar` : `btn-wapp`,
   href: "https://wa.me/57" + props.contacto.wapp + "?text=Estoy+interesado+en+una+moto+Suzuki...",
   target: "_blank"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "logo lg-wapp",
-  src: _logos_wapp_png__WEBPACK_IMPORTED_MODULE_3__["default"]
+  src: _logos_wapp_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+  alt: "logo-wapp"
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   className: !props.contacto.instagram ? `ocultar` : `btn-wapp`,
   href: "https://www.instagram.com/" + props.contacto.instagram,
   target: "_blank"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   className: "logo lg-instagram",
-  src: _logos_instagram_png__WEBPACK_IMPORTED_MODULE_4__["default"]
+  src: _logos_instagram_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+  alt: "logo-instagram"
 }))))))));
 
 /***/ }),
@@ -2286,9 +2286,7 @@ const Index = ({
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     contacto: contacto
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_catalogo__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    contacto: contacto
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_catalogo__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     contacto: contacto
   }));
 };

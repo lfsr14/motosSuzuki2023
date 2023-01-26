@@ -633,14 +633,14 @@ function getForwards(collectedScripts) {
 
 exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=default */ "./.cache/dev-404-page.js?export=default")),
-  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=default */ "./src/pages/index.js?export=default")),
-  "component---src-pages-pdf-page-js": () => __webpack_require__.e(/*! import() | component---src-pages-pdf-page-js */ "component---src-pages-pdf-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/pdfPage.js?export=default */ "./src/pages/pdfPage.js?export=default"))
+  "component---src-pages-ficha-tecnica-js": () => __webpack_require__.e(/*! import() | component---src-pages-ficha-tecnica-js */ "component---src-pages-ficha-tecnica-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/ficha-tecnica.js?export=default */ "./src/pages/ficha-tecnica.js?export=default")),
+  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=default */ "./src/pages/index.js?export=default"))
 };
 
 exports.head = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-jshead */ "component---cache-dev-404-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=head */ "./.cache/dev-404-page.js?export=head")),
-  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-jshead */ "component---src-pages-index-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=head */ "./src/pages/index.js?export=head")),
-  "component---src-pages-pdf-page-js": () => __webpack_require__.e(/*! import() | component---src-pages-pdf-page-jshead */ "component---src-pages-pdf-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/pdfPage.js?export=head */ "./src/pages/pdfPage.js?export=head"))
+  "component---src-pages-ficha-tecnica-js": () => __webpack_require__.e(/*! import() | component---src-pages-ficha-tecnica-jshead */ "component---src-pages-ficha-tecnica-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/ficha-tecnica.js?export=head */ "./src/pages/ficha-tecnica.js?export=head")),
+  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-jshead */ "component---src-pages-index-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=head */ "./src/pages/index.js?export=head"))
 };
 
 /***/ }),
